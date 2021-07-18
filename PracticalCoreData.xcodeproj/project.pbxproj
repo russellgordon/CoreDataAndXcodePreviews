@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81850BC026A4AE3700741956 /* Movie+PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81850BBF26A4AE3700741956 /* Movie+PreviewProvider.swift */; };
 		81C6525826A1C20B00F0EA35 /* PracticalCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6525726A1C20B00F0EA35 /* PracticalCoreDataApp.swift */; };
 		81C6525A26A1C20B00F0EA35 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6525926A1C20B00F0EA35 /* MovieListView.swift */; };
 		81C6525C26A1C20C00F0EA35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C6525B26A1C20C00F0EA35 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81850BBF26A4AE3700741956 /* Movie+PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+PreviewProvider.swift"; sourceTree = "<group>"; };
 		81C6525426A1C20B00F0EA35 /* PracticalCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticalCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C6525726A1C20B00F0EA35 /* PracticalCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalCoreDataApp.swift; sourceTree = "<group>"; };
 		81C6525926A1C20B00F0EA35 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				81C6528126A22D9D00F0EA35 /* Movie+CoreDataProperties.swift */,
 				81C6526526A1C2B400F0EA35 /* PracticalCoreData.xcdatamodeld */,
 				81C6526826A1C3AF00F0EA35 /* StorageProvider.swift */,
+				81850BBF26A4AE3700741956 /* Movie+PreviewProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				81C6525A26A1C20B00F0EA35 /* MovieListView.swift in Sources */,
 				81C6527526A1EFEC00F0EA35 /* MovieEditView.swift in Sources */,
 				81C6525826A1C20B00F0EA35 /* PracticalCoreDataApp.swift in Sources */,
+				81850BC026A4AE3700741956 /* Movie+PreviewProvider.swift in Sources */,
 				81C6526726A1C2B400F0EA35 /* PracticalCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
