@@ -17,42 +17,10 @@ class StorageProvider: ObservableObject {
     // For initializing the Core Data stack and loading the Core Data model file
     let persistentContainer: NSPersistentContainer
     
-    // For use with Xcode Previews, provides some data to work with for examples
-    static var preview: StorageProvider = {
-        
-        // Create an instance of the provider that runs in memory only
-        let storageProvider = StorageProvider(inMemory: true)
-        
-        // Add a few test movies
-        let titles = ["The Godfather", "The Shawshank Redemption", "Schindler's List", "Raging Bull", "Casablanca", "Citizen Kane",]
-        for title in titles {
-            storageProvider.saveMovie(named: title)
-        }
-        
-        // Now save these movies (remember though, these go to the in-memory-only Core Data store)
-        do {
-            try storageProvider.persistentContainer.viewContext.save()
-        } catch {
-            // Something went wrong 😭
-            print("Failed to save test movies: \(error)")
-
-        }
-
-        return storageProvider
-    }()
-    
-    
-    init(inMemory: Bool = false) {
+    init() {
         
         // Access the model file
         persistentContainer = NSPersistentContainer(name: "PracticalCoreData")
-        
-        // Don't save information for future use if running in memory...
-        // Without this, every time we use the static preview property above, the additions to the Core Data store would persist within Xcode Previews
-        // Try uncommenting the code to see this behaviour.
-        if inMemory {
-            persistentContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
-        }
         
         // Attempt to load persistent stores (the underlying storage of data)
         persistentContainer.loadPersistentStores { description, error in

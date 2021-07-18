@@ -90,15 +90,14 @@ struct MovieListView: View {
     }
 }
 
-struct MovieListView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        NavigationView {
-            MovieListView()
-        }
-        .environmentObject(StorageProvider.preview)
-
-    }
-    
-}
+//struct MovieListView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//
+//        NavigationView {
+//            MovieListView()
+//        }
+//
+//    }
+//
+//}
