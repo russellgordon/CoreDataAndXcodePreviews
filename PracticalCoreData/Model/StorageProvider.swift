@@ -48,6 +48,8 @@ class StorageProvider: ObservableObject {
         persistentContainer = NSPersistentContainer(name: "PracticalCoreData")
         
         // Don't save information for future use if running in memory...
+        // Without this, every time we use the static preview property above, the additions to the Core Data store would persist within Xcode Previews
+        // Try uncommenting the code to see this behaviour.
         if inMemory {
             persistentContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
